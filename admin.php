@@ -75,7 +75,7 @@
         <h3>Tambah Gambar</h3>
         <input type="text" id="judul" placeholder="Judul" required />
         <input type="text" id="deskripsi" placeholder="Deskripsi" required />
-        <input type="text" id="url" placeholder="URL Gambar" required />
+        <input type="file" id="file" accept="image/*" required />
         <button onclick="tambahGambar()">Tambah</button>
         <div id="crud-error" style="color: red"></div>
         <hr />
@@ -93,20 +93,15 @@
       function loginAdmin() {
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
-        fetch("admin.php", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: `ajax=1&action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`,
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.success) {
-              localStorage.setItem("admin_logged_in", "true");
-              showDashboard();
-            } else {
-              document.getElementById("login-error").innerText = data.message || "Login gagal";
-            }
-          });
+        // Static username & password
+        const staticUser = "admin";
+        const staticPass = "password123";
+        if (username === staticUser && password === staticPass) {
+          localStorage.setItem("admin_logged_in", "true");
+          showDashboard();
+        } else {
+          document.getElementById("login-error").innerText = "Username atau password salah!";
+        }
       }
 
       function logoutAdmin() {
@@ -125,11 +120,20 @@
       function tambahGambar() {
         const judul = document.getElementById("judul").value;
         const deskripsi = document.getElementById("deskripsi").value;
-        const url = document.getElementById("url").value;
+        const fileInput = document.getElementById("file");
+        if (!fileInput.files[0]) {
+          document.getElementById("crud-error").innerText = "Pilih file gambar!";
+          return;
+        }
+        const formData = new FormData();
+        formData.append("ajax", "1");
+        formData.append("action", "tambah");
+        formData.append("judul", judul);
+        formData.append("deskripsi", deskripsi);
+        formData.append("file", fileInput.files[0]);
         fetch("admin.php", {
           method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: `ajax=1&action=tambah&judul=${encodeURIComponent(judul)}&deskripsi=${encodeURIComponent(deskripsi)}&url=${encodeURIComponent(url)}`,
+          body: formData,
         })
           .then((res) => res.json())
           .then((data) => {
@@ -137,7 +141,7 @@
               loadGambar();
               document.getElementById("judul").value = "";
               document.getElementById("deskripsi").value = "";
-              document.getElementById("url").value = "";
+              document.getElementById("file").value = "";
               document.getElementById("crud-error").innerText = "";
             } else {
               document.getElementById("crud-error").innerText = data.message || "Gagal menambah gambar";
@@ -153,8 +157,9 @@
             list.innerHTML = "";
             if (data.gambar && data.gambar.length > 0) {
               data.gambar.forEach((g, idx) => {
+                // g.foto adalah nama file gambar di folder uploads
                 list.innerHTML += `<div class='gambar-item'>
-                        <img src='${g.url}' alt='' />
+                        <img src='uploads/${g.foto}' alt='' />
                         <b>${g.judul}</b> - <span>${g.deskripsi}</span>
                         <button onclick='hapusGambar(${idx})' style='background:#dc3545;'>Hapus</button>
                     </div>`;
