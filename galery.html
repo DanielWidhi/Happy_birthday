@@ -52,6 +52,18 @@
           filter: saturate(50%);
         }
       }
+      /* Animasi saturasi untuk image card galery */
+      @keyframes cardSaturate {
+        0% {
+          filter: saturate(0%);
+        }
+        100% {
+          filter: saturate(100%);
+        }
+      }
+      .animate-card-saturate {
+        animation: cardSaturate 2.5s ease-in-out forwards;
+      }
       .gallery-section-content {
         position: relative;
         z-index: 1;
@@ -88,95 +100,99 @@
     <div class="h-16"></div>
     <section class="gallery-section-bg py-16 px-2 sm:px-4 bg-gray-50">
       <div class="gallery-section-content max-w-6xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 sm:mb-10" data-aos="fade-down" data-aos-duration="1000">Galery Momen Indah</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 sm:mb-10" data-aos="fade-down" data-aos-duration="1000">Galery Foto</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="img/GDP_5970.jpg" alt="Galery GDP_5970" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5970.jpg" alt="Galery GDP_5970" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1100">
-            <img src="img/GDP_5971.jpg" alt="Galery GDP_5971" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5971.jpg" alt="Galery GDP_5971" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1200">
-            <img src="img/GDP_5989.jpg" alt="Galery GDP_5989" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5989.jpg" alt="Galery GDP_5989" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1300">
-            <img src="img/GDP_5990.jpg" alt="Galery GDP_5990" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5990.jpg" alt="Galery GDP_5990" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1400">
-            <img src="img/GDP_5991.jpg" alt="Galery GDP_5991" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5991.jpg" alt="Galery GDP_5991" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="img/GDP_5998.jpg" alt="Galery GDP_5998" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_5998.jpg" alt="Galery GDP_5998" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1600">
-            <img src="img/GDP_6076.jpg" alt="Galery GDP_6076" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_6076.jpg" alt="Galery GDP_6076" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1700">
-            <img src="img/GDP_6077.jpg" alt="Galery GDP_6077" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_6077.jpg" alt="Galery GDP_6077" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1800">
-            <img src="img/GDP_9306.jpg" alt="Galery GDP_9306" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_9306.jpg" alt="Galery GDP_9306" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1900">
-            <img src="img/GDP_96446.jpg" alt="Galery GDP_96446" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_96446.jpg" alt="Galery GDP_96446" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2000">
-            <img src="img/GDP_96451.jpg" alt="Galery GDP_96451" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_96451.jpg" alt="Galery GDP_96451" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2100">
-            <img src="img/GDP_96459.jpg" alt="Galery GDP_96459" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_96459.jpg" alt="Galery GDP_96459" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2200">
-            <img src="img/GDP_96462.jpg" alt="Galery GDP_96462" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_96462.jpg" alt="Galery GDP_96462" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2300">
-            <img src="img/GDP_ARW_08648.jpg" alt="Galery GDP_ARW_08648" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08648.jpg" alt="Galery GDP_ARW_08648" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2400">
-            <img src="img/GDP_ARW_08687.jpg" alt="Galery GDP_ARW_08687" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08687.jpg" alt="Galery GDP_ARW_08687" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2500">
-            <img src="img/GDP_ARW_08688.jpg" alt="Galery GDP_ARW_08688" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08688.jpg" alt="Galery GDP_ARW_08688" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2600">
-            <img src="img/GDP_ARW_08696.jpg" alt="Galery GDP_ARW_08696" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08696.jpg" alt="Galery GDP_ARW_08696" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2700">
-            <img src="img/GDP_ARW_08702.jpg" alt="Galery GDP_ARW_08702" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08702.jpg" alt="Galery GDP_ARW_08702" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2800">
-            <img src="img/GDP_ARW_08714.jpg" alt="Galery GDP_ARW_08714" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_ARW_08714.jpg" alt="Galery GDP_ARW_08714" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2900">
-            <img src="img/GDP_DSC02094.jpg" alt="Galery GDP_DSC02094" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02094.jpg" alt="Galery GDP_DSC02094" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3000">
-            <img src="img/GDP_DSC02096.jpg" alt="Galery GDP_DSC02096" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02096.jpg" alt="Galery GDP_DSC02096" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3100">
-            <img src="img/GDP_DSC02107.jpg" alt="Galery GDP_DSC02107" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02107.jpg" alt="Galery GDP_DSC02107" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3200">
-            <img src="img/GDP_DSC02134.jpg" alt="Galery GDP_DSC02134" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02134.jpg" alt="Galery GDP_DSC02134" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3300">
-            <img src="img/GDP_DSC02142.jpg" alt="Galery GDP_DSC02142" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02142.jpg" alt="Galery GDP_DSC02142" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3400">
-            <img src="img/GDP_DSC02152.jpg" alt="Galery GDP_DSC02152" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02152.jpg" alt="Galery GDP_DSC02152" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3500">
-            <img src="img/GDP_DSC02153.jpg" alt="Galery GDP_DSC02153" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02153.jpg" alt="Galery GDP_DSC02153" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3600">
-            <img src="img/GDP_DSC02158.jpg" alt="Galery GDP_DSC02158" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02158.jpg" alt="Galery GDP_DSC02158" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
           <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3700">
-            <img src="img/GDP_DSC02161.jpg" alt="Galery GDP_DSC02161" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+            <img src="img/GDP_DSC02161.jpg" alt="Galery GDP_DSC02161" class="w-full h-48 sm:h-56 object-cover gallery-img animate-card-saturate" />
           </div>
         </div>
       </div>
     </section>
+    <audio id="background-music" loop>
+      <source src="asset/snowman.m4a" type="audio/mpeg" />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       // Inisialisasi AOS
@@ -185,6 +201,23 @@
       document.getElementById("navbar-toggle").addEventListener("click", function () {
         var menu = document.getElementById("navbar-menu");
         menu.classList.toggle("show");
+      });
+      // Autoplay music
+      window.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("background-music");
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function (error) {
+            // Autoplay diblokir, tunggu interaksi user
+            document.body.addEventListener(
+              "click",
+              function playMusic() {
+                audio.play();
+              },
+              { once: true }
+            );
+          });
+        }
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
