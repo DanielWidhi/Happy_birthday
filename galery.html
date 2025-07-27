@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galery Foto</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Navbar hamburger style */
+      #navbar-menu {
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        max-height: 0;
+      }
+      #navbar-menu.show {
+        max-height: 300px;
+      }
+      .gallery-img {
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+      }
+      .gallery-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 32px rgba(236, 72, 153, 0.15);
+      }
+      /* Background animasi saturasi galery section */
+      .gallery-section-bg {
+        position: relative;
+        overflow: hidden;
+      }
+      .gallery-section-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background: url("img/GDP_96446.jpg") center center / cover no-repeat;
+        filter: saturate(100%);
+        opacity: 0.5;
+        animation: gallerySaturate 3s ease-in-out forwards;
+      }
+      @keyframes gallerySaturate {
+        0% {
+          filter: saturate(100%);
+        }
+        100% {
+          filter: saturate(50%);
+        }
+      }
+      .gallery-section-content {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased bg-gray-100 text-gray-800">
+    <nav class="bg-white shadow fixed w-full z-50 top-0 left-0">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 font-bold text-pink-600 text-xl">Happy Birthday</div>
+          <div class="hidden md:flex space-x-1">
+            <a href="index.html#home" class="text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Home</a>
+            <a href="index.html#form" class="text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Form</a>
+            <a href="index.html#ucapan" class="text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Ucapan</a>
+            <a href="galery.html" class="text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Galery</a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="navbar-toggle" class="text-pink-600 hover:text-pink-800 focus:outline-none">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="navbar-menu" class="">
+        <a href="index.html#home" class="block text-center text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Home</a>
+        <a href="index.html#form" class="block text-center text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Form</a>
+        <a href="index.html#ucapan" class="block text-center text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Ucapan</a>
+        <a href="galery.html" class="block text-center text-gray-700 hover:text-pink-600 px-3 py-2 rounded transition">Galery</a>
+      </div>
+    </nav>
+    <div class="h-16"></div>
+    <section class="gallery-section-bg py-16 px-2 sm:px-4 bg-gray-50">
+      <div class="gallery-section-content max-w-6xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 sm:mb-10" data-aos="fade-down" data-aos-duration="1000">Galery Momen Indah</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/GDP_5970.jpg" alt="Galery GDP_5970" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1100">
+            <img src="img/GDP_5971.jpg" alt="Galery GDP_5971" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1200">
+            <img src="img/GDP_5989.jpg" alt="Galery GDP_5989" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1300">
+            <img src="img/GDP_5990.jpg" alt="Galery GDP_5990" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1400">
+            <img src="img/GDP_5991.jpg" alt="Galery GDP_5991" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1500">
+            <img src="img/GDP_5998.jpg" alt="Galery GDP_5998" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1600">
+            <img src="img/GDP_6076.jpg" alt="Galery GDP_6076" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1700">
+            <img src="img/GDP_6077.jpg" alt="Galery GDP_6077" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1800">
+            <img src="img/GDP_9306.jpg" alt="Galery GDP_9306" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="1900">
+            <img src="img/GDP_96446.jpg" alt="Galery GDP_96446" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2000">
+            <img src="img/GDP_96451.jpg" alt="Galery GDP_96451" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2100">
+            <img src="img/GDP_96459.jpg" alt="Galery GDP_96459" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2200">
+            <img src="img/GDP_96462.jpg" alt="Galery GDP_96462" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2300">
+            <img src="img/GDP_ARW_08648.jpg" alt="Galery GDP_ARW_08648" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2400">
+            <img src="img/GDP_ARW_08687.jpg" alt="Galery GDP_ARW_08687" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2500">
+            <img src="img/GDP_ARW_08688.jpg" alt="Galery GDP_ARW_08688" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2600">
+            <img src="img/GDP_ARW_08696.jpg" alt="Galery GDP_ARW_08696" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2700">
+            <img src="img/GDP_ARW_08702.jpg" alt="Galery GDP_ARW_08702" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2800">
+            <img src="img/GDP_ARW_08714.jpg" alt="Galery GDP_ARW_08714" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="2900">
+            <img src="img/GDP_DSC02094.jpg" alt="Galery GDP_DSC02094" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3000">
+            <img src="img/GDP_DSC02096.jpg" alt="Galery GDP_DSC02096" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3100">
+            <img src="img/GDP_DSC02107.jpg" alt="Galery GDP_DSC02107" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3200">
+            <img src="img/GDP_DSC02134.jpg" alt="Galery GDP_DSC02134" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3300">
+            <img src="img/GDP_DSC02142.jpg" alt="Galery GDP_DSC02142" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3400">
+            <img src="img/GDP_DSC02152.jpg" alt="Galery GDP_DSC02152" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3500">
+            <img src="img/GDP_DSC02153.jpg" alt="Galery GDP_DSC02153" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3600">
+            <img src="img/GDP_DSC02158.jpg" alt="Galery GDP_DSC02158" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-duration="3700">
+            <img src="img/GDP_DSC02161.jpg" alt="Galery GDP_DSC02161" class="w-full h-48 sm:h-56 object-cover gallery-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inisialisasi AOS
+      AOS.init();
+      // Navbar mobile toggle
+      document.getElementById("navbar-toggle").addEventListener("click", function () {
+        var menu = document.getElementById("navbar-menu");
+        menu.classList.toggle("show");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+      // Full image popup on click
+      document.querySelectorAll(".gallery-img").forEach(function (img) {
+        img.addEventListener("click", function () {
+          Swal.fire({
+            html: `
+              <div class='flex flex-col items-center justify-center p-0 sm:p-4'>
+                <div class='bg-white rounded-xl shadow-2xl overflow-hidden border-4 border-pink-200 animate__animated animate__zoomIn' style='max-width:90vw;'>
+                  <img src='${img.src}' alt='${img.alt}' class='w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl object-contain' />
+                </div>
+                <div class='mt-4 text-pink-600 font-semibold text-lg text-center'>${img.alt}</div>
+              </div>
+            `,
+            showCloseButton: true,
+            showConfirmButton: false,
+            background: "rgba(255,255,255,0.95)",
+            width: "100vw",
+            padding: "0",
+            customClass: {
+              popup: "rounded-lg p-0",
+              closeButton: "text-pink-600 text-2xl",
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
