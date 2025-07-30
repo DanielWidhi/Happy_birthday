@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galery Foto</title>
+    <link rel="icon" href="img/dinokuning.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
@@ -71,6 +72,19 @@
     </style>
   </head>
   <body class="font-sans antialiased bg-gray-100 text-gray-800">
+    <!-- Loading Overlay -->
+    <div
+      id="loading-overlay"
+      style="position: fixed; z-index: 9999; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.95); display: flex; align-items: center; justify-content: center; transition: opacity 0.5s"
+    >
+      <div>
+        <svg class="animate-spin mx-auto mb-4" width="64" height="64" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#EC4899" stroke-width="4"></circle>
+          <path class="opacity-75" fill="#EC4899" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+        <div class="text-pink-600 font-bold text-xl text-center">Loading...</div>
+      </div>
+    </div>
     <nav class="bg-white shadow fixed w-full z-50 top-0 left-0">
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
@@ -219,6 +233,15 @@
           });
         }
       });
+
+      // Loading overlay hide on window load
+      window.onload = function () {
+        const overlay = document.getElementById("loading-overlay");
+        if (overlay) {
+          overlay.style.opacity = "0";
+          setTimeout(() => (overlay.style.display = "none"), 500);
+        }
+      };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script>
